@@ -1,0 +1,104 @@
+{
+  "theme": "light",
+  "typography": {
+    "headings": {
+      "family": "'Cabinet Grotesk', sans-serif",
+      "weights": ["800", "900"],
+      "description": "Bold, industrial, and highly architectural. Used for all major headings and kinetic text."
+    },
+    "body": {
+      "family": "'Satoshi', sans-serif",
+      "weights": ["400", "500", "700"],
+      "description": "Clean, highly legible geometric sans for paragraphs, UI elements, and navigation."
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl md:text-7xl lg:text-[7vw] leading-none tracking-tighter",
+      "h2": "text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight",
+      "h3": "text-2xl sm:text-3xl lg:text-4xl leading-snug tracking-tight",
+      "p": "text-base md:text-lg leading-relaxed",
+      "labels": "text-xs md:text-sm uppercase tracking-[0.2em] font-bold"
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#FFFFFF",
+      "secondary": "#FAFAFA",
+      "description": "Strictly adhered to white/off-white background as requested by user. Ensures a clinical, high-end architectural feel."
+    },
+    "text": {
+      "primary": "#0A0A0A",
+      "secondary": "#525252",
+      "description": "Deep obsidian and charcoal for maximum contrast against white."
+    },
+    "accent": {
+      "primary": "#A5262B",
+      "hover": "#8B1E22",
+      "description": "Deep brick-red from the logo. Used sparingly for buttons, key highlights, and active states."
+    },
+    "surface": {
+      "card": "#FFFFFF",
+      "border": "#E5E5E5"
+    }
+  },
+  "layouts": {
+    "spacing_system": "Generous spacing. Use py-24 or py-32 for section padding. gap-8 to gap-16 for grids.",
+    "grid_strategy": "Bento-style grids for Services (Mode A: The Tetris Grid). Asymmetrical layouts. High use of negative space to convey luxury and scale.",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "header": "Fixed at top, z-50. bg-white/80 backdrop-blur-xl border-b border-black/5. Must contain Logo, Links, and AL/EN toggle. NO completely transparent background on header."
+  },
+  "motion": {
+    "smooth_scroll": "Lenis is MANDATORY. Standard browser scroll is forbidden.",
+    "hero_intro": "3D Elevator Door Intro: Create an absolute positioned full-screen overlay consisting of two 'doors' (left and right panels). Use framer-motion useScroll to slide them open (translateX -100% and 100%) as the user scrolls, revealing the main website content underneath.",
+    "kinetic_typography": "Line-by-line reveal using framer-motion (staggerChildren). Text masked with overflow-hidden wrappers.",
+    "hover_states": "Buttons use deep red background filling on hover. Cards lift slightly (-translate-y-2) with a sharper shadow.",
+    "page_transitions": "Fade and slight slide up (y: 20 -> 0) on mount."
+  },
+  "components": {
+    "navigation": "Sticky top bar. Logo on left (LIFT ExprEss with wrench). Right side: Desktop links + AL/EN toggle. Mobile hamburger menu.",
+    "buttons": "Sharp edges (rounded-none). bg-[#A5262B] text-white. Hover state: darker red. Must have data-testid.",
+    "marquee": "Editorial ribbon. 'Mirëmbajtje, shitje dhe servisim te ashensorve' running slowly across the screen with huge typography (text-[8vw] text-transparent text-stroke-black/10 or similar outline effect).",
+    "services_showcase": "Asymmetrical grid. Numbered chapters (01, 02, 03). Large titles, small descriptive text, leading to respective internal pages."
+  },
+  "media": {
+    "3d_libraries": [
+      "framer-motion",
+      "lenis",
+      "@react-three/fiber",
+      "@react-three/drei"
+    ],
+    "image_urls": {
+      "hero_architecture": "https://images.pexels.com/photos/12780906/pexels-photo-12780906.jpeg",
+      "service_maintenance": "https://images.pexels.com/photos/9504463/pexels-photo-9504463.jpeg",
+      "service_sales": "https://images.pexels.com/photos/31161354/pexels-photo-31161354.jpeg",
+      "about_interior": "https://images.pexels.com/photos/29804001/pexels-photo-29804001.jpeg"
+    },
+    "image_strategy": "Images should have slight monochromatic or high-contrast filters to fit the white/black/red aesthetic. Use CSS grayscale(100%) on idle, revealing color on hover."
+  },
+  "pages": {
+    "home": "Full screen elevator door intro on scroll. Once open, hero section with kinetic text. Services summary bento grid. Marquee text. Numbered manifesto. Contact teaser.",
+    "services": "Detailed breakdown of Maintenance, Sales, Service/Repair. Technical specs, imagery of technicians.",
+    "about_contact": "Company history. Map, Address (Rruga Ali Kelmendi, Prishtinë 10000), Phone (+383 43 901 313), Hours. Contact form."
+  },
+  "accessibility": {
+    "contrast": "Strict APCA/WCAG AA compliance for #0A0A0A on #FFFFFF.",
+    "motion": "Respect prefers-reduced-motion. If true, skip elevator intro and just fade in."
+  },
+  "instructions_to_main_agent": [
+    "You must build a 3-page site with react-router-dom: Home, Services, About+Contact.",
+    "Implement the signature full-screen Elevator intro on the Home page using Framer Motion. The screen is initially covered by two metallic/white door panels. On wheel scroll, they slide horizontally to reveal the hero section.",
+    "Add an AL/EN language toggle in the header. Mock the translation state.",
+    "Use pure HTML+Tailwind for complex marketing layouts. Use Shadcn for basic UI like forms/inputs.",
+    "Follow the color palette strictly: #FFFFFF bg, #0A0A0A text, #A5262B accent.",
+    "Do NOT use Inter or Roboto. Include Google Fonts for 'Cabinet Grotesk' or 'Outfit', and 'Satoshi' or 'DM Sans'.",
+    "Ensure Lenis smooth scroll is implemented at the root level."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Do not converge toward generic outputs. Use stark contrasts and brutalist/editorial spacing.",
+    "Every interaction needs micro-animations (hover states, transitions).",
+    "Use 2-3x more spacing than feels comfortable. py-24 or py-32 for sections.",
+    "Never use placeholder URLs for images. Use the provided image_urls.",
+    "Do NOT use HTML-based components for advanced user interactions.",
+    "You MUST NOT center align the app container in App.css.",
+    "All interactive elements MUST include a data-testid attribute."
+  ]
+}
