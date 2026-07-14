@@ -88,24 +88,22 @@ const DoorFace = ({ side, lang }) => (
     <div className="absolute inset-0 opacity-40 [background:repeating-linear-gradient(90deg,transparent,transparent_38px,rgba(0,0,0,0.06)_39px,transparent_40px)]" />
 
     {/* Floor indicator near top-center (edge that meets seam) */}
-    <div className={`absolute top-[14%] ${side === "left" ? "right-8" : "left-8"} flex flex-col items-center gap-3`}>
+    <div className={`absolute top-[12%] ${side === "left" ? "right-8" : "left-8"} flex flex-col items-center gap-3`}>
       <div className="bg-ink text-brick font-display text-2xl md:text-4xl tracking-widest px-4 py-2 md:px-6 md:py-3 border border-white/10 shadow-lg">
         {side === "left" ? "▲" : "L E"}
       </div>
     </div>
 
-    {/* Etched logo centered on each panel */}
-    <div className="absolute top-1/2 -translate-y-1/2 w-full flex flex-col items-center gap-4 px-6">
-      <img
-        src="/liftexpress.png"
-        alt=""
-        className="h-16 w-16 md:h-24 md:w-24 object-contain opacity-90"
-      />
-      {side === "left" ? (
-        <span className="font-display text-3xl md:text-5xl tracking-tighter text-ink/80">LIFT</span>
-      ) : (
-        <span className="font-display text-3xl md:text-5xl tracking-tighter text-brick/80">EXPRESS</span>
-      )}
+    {/*
+      One single logo centered on the whole screen (its center sits on the
+      door seam). Each door only shows half of it, so it splits in two as the
+      doors slide apart.
+    */}
+    <div
+      className="absolute top-1/2 -translate-y-1/2 h-[42vh] w-[42vh]"
+      style={side === "left" ? { right: "-21vh" } : { left: "-21vh" }}
+    >
+      <img src="/liftexpress.png" alt="" className="h-full w-full object-contain drop-shadow-sm" />
     </div>
 
     {/* subtle top light strip */}
