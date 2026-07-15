@@ -20,7 +20,7 @@ export const InteractiveShowcase = ({ items, buttonLabel, testidPrefix, lang }) 
           data-testid={`${testidPrefix}-toggle`}
           className="group w-full flex items-center justify-between gap-4 bg-ink text-white px-6 py-5 uppercase tracking-[0.12em] text-sm font-bold"
         >
-          <span className="truncate">{open ? buttonLabel : current.title}</span>
+          <span className="truncate">{buttonLabel}</span>
           <ChevronDown size={20} className={`shrink-0 text-brick transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
         </button>
 

@@ -144,16 +144,16 @@ export const offerPage = {
     typesTitle: { label: "Llojet e ashensorëve", title: "Zgjidh një lloj për ta parë." },
     partsTitle: { label: "Pjesët e ashensorit", title: "Pjesë origjinale që ofrojmë." },
     workTitle: { label: "Puna jonë", title: "Projekte të realizuara." },
-    selectBtn: "Zgjidh një lloj",
-    selectPart: "Zgjidh një pjesë",
+    selectBtn: "Llojet e liftave",
+    selectPart: "Pjesët e liftave",
   },
   en: {
     hero: { label: "What We Offer", title: "Elevators and parts for every need.", sub: "Click to discover the elevator types and original parts we offer. Every solution with a photo and description." },
     typesTitle: { label: "Elevator types", title: "Pick a type to view it." },
     partsTitle: { label: "Elevator parts", title: "Original parts we offer." },
     workTitle: { label: "Our work", title: "Completed projects." },
-    selectBtn: "Choose a type",
-    selectPart: "Choose a part",
+    selectBtn: "Elevator types",
+    selectPart: "Elevator parts",
   },
 };
 
