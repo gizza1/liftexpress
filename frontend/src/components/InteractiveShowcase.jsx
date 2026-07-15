@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Plus } from "lucide-react";
 
 /*
  * Interactive selector: a button reveals the list of options; picking one
@@ -8,50 +7,21 @@ import { ChevronDown, Plus } from "lucide-react";
  */
 export const InteractiveShowcase = ({ items, buttonLabel, testidPrefix, lang }) => {
   const [active, setActive] = useState(0);
-  const [open, setOpen] = useState(false);
   const current = items[active];
 
   return (
     <div data-testid={`${testidPrefix}-showcase`} className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
       {/* Selector column */}
       <div>
-        <button
-          onClick={() => setOpen((p) => !p)}
-          data-testid={`${testidPrefix}-toggle`}
-          className="group w-full flex items-center justify-between gap-4 bg-ink text-white px-6 py-5 uppercase tracking-[0.12em] text-sm font-bold"
+        <div
+          data-testid={`${testidPrefix}-label`}
+          className="w-full flex items-center justify-between gap-4 bg-ink text-white px-6 py-5 uppercase tracking-[0.12em] text-sm font-bold select-none"
         >
           <span className="truncate">{buttonLabel}</span>
-          <ChevronDown size={20} className={`shrink-0 text-brick transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
-        </button>
+          <span className="h-2.5 w-2.5 rounded-full bg-brick shrink-0" />
+        </div>
 
-        <AnimatePresence initial={false}>
-          {open && (
-            <motion.ul
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="overflow-hidden border-x border-b border-black/10"
-            >
-              {items.map((item, i) => (
-                <li key={item.key}>
-                  <button
-                    onClick={() => { setActive(i); setOpen(false); }}
-                    data-testid={`${testidPrefix}-option-${item.key}`}
-                    className={`group w-full text-left flex items-center gap-4 px-6 py-4 border-b border-black/5 last:border-0 transition-colors ${
-                      i === active ? "bg-brick/5 text-brick" : "hover:bg-black/[0.03]"
-                    }`}
-                  >
-                    <Plus size={16} className="text-brick shrink-0" />
-                    <span className="font-medium">{item.title}</span>
-                  </button>
-                </li>
-              ))}
-            </motion.ul>
-          )}
-        </AnimatePresence>
-
-        {/* Quick pills (always visible for fast switching) */}
+        {/* Pills — the actual selectors */}
         <div className="mt-6 flex flex-wrap gap-2">
           {items.map((item, i) => (
             <button
