@@ -114,10 +114,13 @@ export default function AboutContact() {
 
       {/* Map */}
       <section className="relative">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-6">
+          <span className="text-xs uppercase tracking-[0.25em] font-bold text-brick">{p.contact.mapLabel}</span>
+        </div>
         <iframe
-          title="Lift Express Prishtinë"
+          title="LiftExpress Showroom Prishtinë"
           data-testid="contact-map"
-          src="https://www.google.com/maps?q=Rruga+Ali+Kelmendi,+Prishtin%C3%AB+10000&output=embed"
+          src="https://www.google.com/maps?q=Rruga+Bajram+Kelmendi,+Prishtin%C3%AB+10000&output=embed"
           className="w-full h-[380px] md:h-[460px] grayscale contrast-[1.05]"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

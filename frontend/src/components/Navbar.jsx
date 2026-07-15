@@ -14,6 +14,7 @@ const Logo = () => (
     />
     <span className="font-display text-lg md:text-xl tracking-tight leading-none hidden sm:block">
       LIFT<span className="text-brick">EXPRESS</span>
+      <span className="block text-[9px] md:text-[10px] tracking-[0.35em] text-ash font-sans font-bold mt-0.5">SHOWROOM</span>
     </span>
   </Link>
 );

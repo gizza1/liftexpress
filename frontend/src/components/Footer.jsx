@@ -16,9 +16,10 @@ export const Footer = () => {
         <div className="grid md:grid-cols-12 gap-12">
           <div className="md:col-span-6">
             <div className="flex items-center gap-3 mb-6">
-              <img src="/liftexpress.png" alt="Lift Express" className="h-12 w-12 object-contain bg-white rounded-full p-1" />
-              <span className="font-display text-2xl tracking-tight">
+              <img src="/liftexpress.png" alt="LiftExpress Showroom" className="h-12 w-12 object-contain bg-white rounded-full p-1" />
+              <span className="font-display text-2xl tracking-tight leading-none">
                 LIFT<span className="text-brick">EXPRESS</span>
+                <span className="block text-[10px] tracking-[0.35em] text-white/50 font-sans font-bold mt-1">SHOWROOM</span>
               </span>
             </div>
             <p className="text-white/60 max-w-md text-lg leading-relaxed">{tr.tagline}</p>
@@ -64,7 +65,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-sm text-white/40">
-          <span>© {year} {COMPANY.name}. {tr.rights}</span>
+          <span data-testid="footer-rights">{tr.rights}</span>
           <span>Prishtinë · Kosovë</span>
         </div>
       </div>

@@ -18,6 +18,14 @@ Business info: Rruga Ali Kelmendi, Prishtinë 10000 · +383 43 901 313 · Open �
 - Signature elevator-door scroll reveal on Home.
 - Bilingual AL/EN toggle. Brick-red (#A5262B) accent, white bg, black text.
 
+## Implemented (2026-07-15) — Rebrand to "LiftExpress Showroom"
+- Updated all company data: name → LiftExpress Showroom, phone → +383 44 901 313, address → Rruga Bajram Kelmendi, new specialization description, 5.0 Google rating.
+- Home: added showroom photos + description section and dedicated "Servisimi i liftave" section.
+- Page 2 renamed "Çfarë Ofrojmë Ne": interactive dropdown selectors (button → options → photo+text) for 5 elevator types and 6 parts, plus completed-work gallery.
+- Footer: black with "© 2026 All rights belong to LiftExpress".
+- About+Contact: map updated to Rruga Bajram Kelmendi. Logo shows LIFTEXPRESS + SHOWROOM.
+- Images are STOCK PLACEHOLDERS — user will send real logo, showroom, part and lift-type photos to replace via /lib/content.js (IMAGES, liftTypes, partsList, workExamples).
+
 ## Implemented (2026-07-14)
 - Home: ElevatorStage door reveal, kinetic hero, stats band, services summary, editorial marquee, numbered manifesto, CTA band.
 - Services: 3 detailed alternating service blocks (Maintenance/Sales/Servicing) with bullets, process steps, CTA.

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Wrench, ShoppingCart, LifeBuoy, ArrowUpRight } from "lucide-react";
+import { ArrowRight, Phone, ShoppingCart, Wrench, LifeBuoy, ArrowUpRight, Check, Star } from "lucide-react";
 import { useLang } from "../context/LanguageContext";
 import { t, COMPANY, IMAGES } from "../lib/content";
 import { ElevatorStage } from "../components/ElevatorStage";
@@ -88,18 +88,43 @@ const Stats = () => {
   );
 };
 
-const icons = [Wrench, ShoppingCart, LifeBuoy];
+const ShowroomSection = () => {
+  const { lang } = useLang();
+  const s = t[lang].showroom;
+  return (
+    <section className="max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32">
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <Reveal>
+          <div className="grid grid-cols-2 gap-4">
+            <img src={IMAGES.showroom1} alt="Showroom" className="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+            <img src={IMAGES.showroom2} alt="Showroom" className="w-full aspect-[3/4] object-cover mt-8 grayscale hover:grayscale-0 transition-all duration-700" />
+          </div>
+        </Reveal>
+        <Reveal delay={0.15}>
+          <div>
+            <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-bold text-brick">
+              <Star size={14} className="fill-brick text-brick" /> {COMPANY.rating} · {s.label}
+            </span>
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl tracking-tight mt-4 leading-[1.02]">{s.title}</h2>
+            <p className="text-ash mt-6 text-lg leading-relaxed">{s.body}</p>
+            <p className="text-ink mt-4 text-lg font-medium">{s.body2}</p>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+};
+
+const icons = [ShoppingCart, Wrench, LifeBuoy];
 
 const ServicesSummary = () => {
   const { lang } = useLang();
   const s = t[lang].servicesHome;
   return (
-    <section className="max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32">
+    <section className="max-w-7xl mx-auto px-6 md:px-12 pb-24 md:pb-32">
       <Reveal>
         <span className="text-xs uppercase tracking-[0.25em] font-bold text-brick">{s.label}</span>
-        <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl tracking-tight mt-4 max-w-2xl leading-[1.02]">
-          {s.title}
-        </h2>
+        <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl tracking-tight mt-4 max-w-2xl leading-[1.02]">{s.title}</h2>
       </Reveal>
 
       <div className="mt-16 grid md:grid-cols-3 gap-6">
@@ -131,6 +156,38 @@ const ServicesSummary = () => {
   );
 };
 
+const Servicing = () => {
+  const { lang } = useLang();
+  const s = t[lang].servicing;
+  return (
+    <section
+      className="relative overflow-hidden"
+      style={{ backgroundImage: `url(${IMAGES.technician})`, backgroundSize: "cover", backgroundPosition: "center" }}
+    >
+      <div className="absolute inset-0 bg-ink/92" />
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 text-white grid lg:grid-cols-2 gap-12 items-center">
+        <Reveal>
+          <span className="text-xs uppercase tracking-[0.25em] font-bold text-brick">{s.label}</span>
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl tracking-tight mt-4 leading-[1.02]">{s.title}</h2>
+          <p className="text-white/70 mt-6 text-lg leading-relaxed max-w-xl">{s.body}</p>
+        </Reveal>
+        <Reveal delay={0.15}>
+          <ul className="space-y-5">
+            {s.points.map((p, i) => (
+              <li key={i} data-testid={`servicing-point-${i}`} className="flex items-center gap-4 border-b border-white/10 pb-5">
+                <span className="h-10 w-10 shrink-0 bg-brick flex items-center justify-center">
+                  <Check size={18} className="text-white" />
+                </span>
+                <span className="text-lg">{p}</span>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </div>
+    </section>
+  );
+};
+
 const Manifesto = () => {
   const { lang } = useLang();
   const m = t[lang].manifesto;
@@ -142,7 +199,7 @@ const Manifesto = () => {
             <span className="text-xs uppercase tracking-[0.25em] font-bold text-brick">{m.label}</span>
             <h2 className="font-display text-4xl lg:text-5xl tracking-tight mt-4 leading-tight">{m.title}</h2>
             <div className="mt-8 aspect-[3/4] overflow-hidden">
-              <img src={IMAGES.cabin} alt="" className="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+              <img src={IMAGES.cabinWood} alt="" className="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
             </div>
           </Reveal>
         </div>
@@ -199,7 +256,9 @@ export default function Home() {
         <HeroContent />
       </ElevatorStage>
       <Stats />
+      <ShowroomSection />
       <ServicesSummary />
+      <Servicing />
       <Marquee text={t[lang].marquee} />
       <Manifesto />
       <CtaBand />
