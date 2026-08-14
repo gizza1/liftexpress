@@ -243,7 +243,6 @@ export const workExamples = [
   { image: "/media/projects/0-02-05-771098a34abbc9e86113793b0346b89d89edef08b7141e259938d5d4acd9e603_c8188d762dce9cab - Trim.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
   { image: "/media/projects/0-02-05-9b1a7d33b36eab8001ebbee1ced1f2e4e2c0c4aa39792bcfdf4f5ebc12dd0d1d_3f25ab1777923db7 - Trim.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
   { image: "/media/projects/viber_image_2026-07-14_23-21-05-022.jpg", type: "image", sq: "Projekt i realizuar", en: "Completed project" },
-  { image: "/media/projects/viber_image_2026-07-14_23-21-05-056.jpg", type: "image", sq: "Projekt i realizuar", en: "Completed project" },
   { image: "/media/projects/viber_image_2026-07-14_23-21-05-622.jpg", type: "image", sq: "Projekt i realizuar", en: "Completed project" },
 ];
 
