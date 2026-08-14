@@ -7,7 +7,9 @@ import { motion, AnimatePresence } from "framer-motion";
  */
 export const InteractiveShowcase = ({ items, buttonLabel, testidPrefix, lang }) => {
   const [active, setActive] = useState(0);
+  const [activePhoto, setActivePhoto] = useState(0);
   const current = items[active];
+  const photos = current.images || [current.image];
 
   return (
     <div data-testid={`${testidPrefix}-showcase`} className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
@@ -26,7 +28,10 @@ export const InteractiveShowcase = ({ items, buttonLabel, testidPrefix, lang }) 
           {items.map((item, i) => (
             <button
               key={item.key}
-              onClick={() => setActive(i)}
+              onClick={() => {
+                setActive(i);
+                setActivePhoto(0);
+              }}
               data-testid={`${testidPrefix}-pill-${item.key}`}
               className={`text-xs uppercase tracking-wider px-4 py-2 border rounded-full transition-all ${
                 i === active ? "bg-brick border-brick text-white" : "border-black/15 hover:border-brick hover:text-brick"
@@ -50,13 +55,30 @@ export const InteractiveShowcase = ({ items, buttonLabel, testidPrefix, lang }) 
             data-testid={`${testidPrefix}-detail`}
           >
             <div className="relative overflow-hidden">
-              <img src={current.image} alt={current.title} className="w-full aspect-[4/3] object-cover" />
+              <img src={photos[activePhoto]} alt={current.title} className="w-full aspect-[4/3] object-contain bg-black/5" />
               {current.tag && (
                 <span className="absolute top-4 left-4 bg-white/90 backdrop-blur px-4 py-2 text-xs uppercase tracking-[0.15em] font-bold text-brick">
                   {current.tag}
                 </span>
               )}
             </div>
+            {photos.length > 1 && (
+              <div className="mt-3 grid grid-cols-5 gap-2" aria-label={`${current.title} photos`}>
+                {photos.map((photo, index) => (
+                  <button
+                    key={photo}
+                    type="button"
+                    onClick={() => setActivePhoto(index)}
+                    aria-label={`${current.title} — photo ${index + 1}`}
+                    className={`relative overflow-hidden aspect-square border-2 transition-colors ${
+                      index === activePhoto ? "border-brick" : "border-transparent hover:border-black/30"
+                    }`}
+                  >
+                    <img src={photo} alt="" className="h-full w-full object-contain bg-black/5" />
+                  </button>
+                ))}
+              </div>
+            )}
             <h3 className="font-display text-3xl md:text-4xl tracking-tight mt-6">{current.title}</h3>
             <p className="text-ash mt-4 text-lg leading-relaxed">{current.desc}</p>
           </motion.div>

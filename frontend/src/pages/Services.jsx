@@ -1,5 +1,5 @@
-import React from "react";
-import { Phone } from "lucide-react";
+import React, { useState } from "react";
+import { Phone, Play, X } from "lucide-react";
 import { useLang } from "../context/LanguageContext";
 import { offerPage, liftTypes, partsList, workExamples, COMPANY, t } from "../lib/content";
 import { Reveal, MaskedLines } from "../components/Reveal";
@@ -9,6 +9,7 @@ import { InteractiveShowcase } from "../components/InteractiveShowcase";
 export default function Offer() {
   const { lang } = useLang();
   const p = offerPage[lang];
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <div data-testid="page-offer" className="pt-32 md:pt-40">
@@ -60,15 +61,51 @@ export default function Offer() {
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {workExamples.map((w, i) => (
             <Reveal key={i} delay={i * 0.08}>
-              <div data-testid={`work-${i}`} className="group relative overflow-hidden aspect-[3/4]">
-                <img src={w.image} alt={w[lang]} className="h-full w-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+              <button
+                type="button"
+                data-testid={`work-${i}`}
+                onClick={() => setSelectedProject(w)}
+                className="group relative overflow-hidden aspect-[3/4] w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-brick"
+                aria-label={`${w[lang]} — ${lang === "sq" ? "hape" : "open"}`}
+              >
+                {w.type === "video" ? (
+                  <video src={w.image} muted preload="metadata" className="h-full w-full object-contain bg-black grayscale group-hover:grayscale-0 transition-all duration-700" />
+                ) : (
+                  <img src={w.image} alt="" className="h-full w-full object-contain bg-black/5 grayscale group-hover:grayscale-0 transition-all duration-700" />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
+                {w.type === "video" && <span className="absolute top-4 right-4 rounded-full bg-white/90 p-2 text-ink"><Play size={16} fill="currentColor" /></span>}
                 <span className="absolute bottom-4 left-4 right-4 text-white font-display text-xl tracking-tight">{w[lang]}</span>
-              </div>
+              </button>
             </Reveal>
           ))}
         </div>
       </section>
+
+      {selectedProject && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 md:p-10"
+          role="dialog"
+          aria-modal="true"
+          aria-label={selectedProject[lang]}
+          onClick={() => setSelectedProject(null)}
+        >
+          <div className="relative max-h-full max-w-5xl" onClick={(event) => event.stopPropagation()}>
+            <button
+              type="button"
+              onClick={() => setSelectedProject(null)}
+              className="absolute -top-12 right-0 flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white hover:text-brick"
+            >
+              {lang === "sq" ? "Mbyll" : "Close"} <X size={20} />
+            </button>
+            {selectedProject.type === "video" ? (
+              <video src={selectedProject.image} controls autoPlay className="max-h-[80vh] max-w-full bg-black" />
+            ) : (
+              <img src={selectedProject.image} alt={selectedProject[lang]} className="max-h-[80vh] max-w-full object-contain" />
+            )}
+          </div>
+        </div>
+      )}
 
       {/* CTA */}
       <section className="bg-ink text-white">
