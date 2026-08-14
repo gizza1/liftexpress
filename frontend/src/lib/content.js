@@ -53,6 +53,33 @@ const buttonPhotos = [
   "/media/buttons/viber_image_2026-07-14_23-17-48-749.jpg",
 ];
 
+// Folder-based grouping from the supplied media library.
+const liftMediaByType = {
+  industrial: ["/media/lifts/industrial/viber_image_2026-07-14_23-21-04-923.jpg"],
+  kitchen: ["/media/lifts/kitchen/viber_image_2026-07-14_23-17-17-688.jpg"],
+  home: [
+    "/media/lifts/home/Screenshot 2026-08-14 222700.png", "/media/lifts/home/Screenshot 2026-08-14 222718.png", "/media/lifts/home/Screenshot 2026-08-14 222741.png",
+    "/media/lifts/home/viber_image_2026-07-14_23-15-21-209.jpg", "/media/lifts/home/viber_image_2026-07-14_23-15-21-321.jpg", "/media/lifts/home/viber_image_2026-07-14_23-15-21-380.jpg",
+    "/media/lifts/home/viber_image_2026-07-14_23-15-21-646.jpg", "/media/lifts/home/viber_image_2026-07-14_23-17-17-717.jpg", "/media/lifts/home/viber_image_2026-07-14_23-17-17-745.jpg",
+  ],
+  accessibility: ["/media/lifts/accessibility/0-02-05-eaa55d858ec4a5ab15164dc26604b9653175e017835d9ed0fd320554744f011f_ef340a47e813790c.mp4"],
+};
+
+const partMediaByType = {
+  buttons: buttonPhotos.map((photo) => photo.replace("/media/buttons/", "/media/parts/buttons/")),
+  cabins: [
+    "/media/parts/cabins/Screenshot 2026-08-14 222700.png", "/media/parts/cabins/Screenshot 2026-08-14 222718.png", "/media/parts/cabins/Screenshot 2026-08-14 222741.png",
+    "/media/parts/cabins/viber_image_2026-07-14_23-15-21-209.jpg", "/media/parts/cabins/viber_image_2026-07-14_23-15-21-321.jpg", "/media/parts/cabins/viber_image_2026-07-14_23-15-21-380.jpg", "/media/parts/cabins/viber_image_2026-07-14_23-15-21-646.jpg",
+  ],
+  cables: ["/media/parts/cables/litar lifti 2.png", "/media/parts/cables/litar lifti.webp"],
+  motors: [
+    "/media/parts/motors/ChatGPT Image Aug 15, 2026, 12_04_12 AM.png", "/media/parts/motors/viber_image_2026-07-14_23-18-44-419.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-44-615.jpg",
+    "/media/parts/motors/viber_image_2026-07-14_23-18-44-949.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-45-148.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-45-823.jpg",
+    "/media/parts/motors/viber_image_2026-07-14_23-18-45-860.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-45-924.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-46-087.jpg",
+    "/media/parts/motors/viber_image_2026-07-14_23-18-46-172.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-46-365.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-46-694.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-47-093.jpg",
+  ],
+};
+
 export const t = {
   sq: {
     nav: { home: "Ballina", services: "Çfarë Ofrojmë", about: "Rreth Nesh", cta: "Na Kontakto" },
@@ -184,31 +211,31 @@ export const offerPage = {
 
 export const liftTypes = {
   sq: [
-    { key: "industrial", title: "Ashensor industrial / i mallrave", tag: "Kapacitet i lartë", images: liftPhotos.slice(0, 4), desc: "Ashensorë të fuqishëm për transport mallrash e ngarkesash të rënda në fabrika, depo dhe objekte industriale, me qëndrueshmëri maksimale." },
-    { key: "aksesueshmeri", title: "Platformë për persona me aftësi të kufizuara", tag: "Aksesueshmëri", images: liftPhotos.slice(4, 7), desc: "Platforma ngritëse dhe ashensorë të aksesueshëm që mundësojnë lëvizje të sigurt për persona me aftësi të kufizuara — brenda dhe jashtë objekteve." },
-    { key: "banesor", title: "Ashensor elektrik për banesa & shtëpi", tag: "Shtëpi private", images: liftPhotos.slice(7, 11), desc: "Zgjidhje kompakte elektrike për shtëpi private dhe objekte banimi, me konsum të ulët energjie dhe instalim të thjeshtë." },
-    { key: "kuzhine", title: "Ashensor kuzhine (montakarikë)", tag: "Restorante & hotele", images: liftPhotos.slice(11), desc: "Ashensorë të vegjël për transport ushqimi e pjatash mes kateve — të domosdoshëm për restorante, hotele dhe kuzhina profesionale." },
+    { key: "industrial", title: "Ashensor industrial / i mallrave", tag: "Kapacitet i lartë", images: liftMediaByType.industrial, desc: "Ashensorë të fuqishëm për transport mallrash e ngarkesash të rënda në fabrika, depo dhe objekte industriale, me qëndrueshmëri maksimale." },
+    { key: "aksesueshmeri", title: "Platformë për persona me aftësi të kufizuara", tag: "Aksesueshmëri", images: liftMediaByType.accessibility, desc: "Platforma ngritëse dhe ashensorë të aksesueshëm që mundësojnë lëvizje të sigurt për persona me aftësi të kufizuara — brenda dhe jashtë objekteve." },
+    { key: "banesor", title: "Ashensor elektrik për banesa & shtëpi", tag: "Shtëpi private", images: liftMediaByType.home, desc: "Zgjidhje kompakte elektrike për shtëpi private dhe objekte banimi, me konsum të ulët energjie dhe instalim të thjeshtë." },
+    { key: "kuzhine", title: "Ashensor kuzhine (montakarikë)", tag: "Restorante & hotele", images: liftMediaByType.kitchen, desc: "Ashensorë të vegjël për transport ushqimi e pjatash mes kateve — të domosdoshëm për restorante, hotele dhe kuzhina profesionale." },
   ],
   en: [
-    { key: "industrial", title: "Industrial / freight elevator", tag: "High capacity", images: liftPhotos.slice(0, 4), desc: "Powerful elevators for transporting goods and heavy loads in factories, warehouses and industrial facilities, with maximum durability." },
-    { key: "aksesueshmeri", title: "Accessibility platform lift", tag: "Accessibility", images: liftPhotos.slice(4, 7), desc: "Lifting platforms and accessible elevators enabling safe movement for people with disabilities — indoors and outdoors." },
-    { key: "banesor", title: "Electric home elevator", tag: "Private homes", images: liftPhotos.slice(7, 11), desc: "Compact electric solutions for private houses and residential buildings, with low energy consumption and simple installation." },
-    { key: "kuzhine", title: "Kitchen dumbwaiter", tag: "Restaurants & hotels", images: liftPhotos.slice(11), desc: "Small elevators for transporting food and dishes between floors — essential for restaurants, hotels and professional kitchens." },
+    { key: "industrial", title: "Industrial / freight elevator", tag: "High capacity", images: liftMediaByType.industrial, desc: "Powerful elevators for transporting goods and heavy loads in factories, warehouses and industrial facilities, with maximum durability." },
+    { key: "aksesueshmeri", title: "Accessibility platform lift", tag: "Accessibility", images: liftMediaByType.accessibility, desc: "Lifting platforms and accessible elevators enabling safe movement for people with disabilities — indoors and outdoors." },
+    { key: "banesor", title: "Electric home elevator", tag: "Private homes", images: liftMediaByType.home, desc: "Compact electric solutions for private houses and residential buildings, with low energy consumption and simple installation." },
+    { key: "kuzhine", title: "Kitchen dumbwaiter", tag: "Restaurants & hotels", images: liftMediaByType.kitchen, desc: "Small elevators for transporting food and dishes between floors — essential for restaurants, hotels and professional kitchens." },
   ],
 };
 
 export const partsList = {
   sq: [
-    { key: "motor", title: "Motori tërheqës", images: partPhotos.slice(0, 5), desc: "Motorë tërheqës të fuqishëm dhe të qëndrueshëm që sigurojnë lëvizje të butë dhe efikase." },
-    { key: "kabina", title: "Kabina", images: partPhotos.slice(5, 10), desc: "Kabina të personalizueshme me materiale cilësore, ndriçim dhe finish sipas dëshirës." },
-    { key: "butona", title: "Butonat & paneli", images: buttonPhotos, desc: "Panele butonash moderne, të qëndrueshme dhe të lehta për përdorim, me ndriçim LED." },
-    { key: "litaret", title: "Litarët e çelikut", images: partPhotos.slice(10), desc: "Litarë çeliku me rezistencë të lartë, të testuar për ngarkesa maksimale dhe siguri të plotë." },
+    { key: "motor", title: "Motori tërheqës", images: partMediaByType.motors, desc: "Motorë tërheqës të fuqishëm dhe të qëndrueshëm që sigurojnë lëvizje të butë dhe efikase." },
+    { key: "kabina", title: "Kabina", images: partMediaByType.cabins, desc: "Kabina të personalizueshme me materiale cilësore, ndriçim dhe finish sipas dëshirës." },
+    { key: "butona", title: "Butonat & paneli", images: partMediaByType.buttons, desc: "Panele butonash moderne, të qëndrueshme dhe të lehta për përdorim, me ndriçim LED." },
+    { key: "litaret", title: "Litarët e çelikut", images: partMediaByType.cables, desc: "Litarë çeliku me rezistencë të lartë, të testuar për ngarkesa maksimale dhe siguri të plotë." },
   ],
   en: [
-    { key: "motor", title: "Traction motor", images: partPhotos.slice(0, 5), desc: "Powerful, durable traction motors that ensure a smooth and efficient ride." },
-    { key: "kabina", title: "Cabin", images: partPhotos.slice(5, 10), desc: "Customizable cabins with quality materials, lighting and finishes to your taste." },
-    { key: "butona", title: "Buttons & panel", images: buttonPhotos, desc: "Modern, durable and easy-to-use button panels with LED lighting." },
-    { key: "litaret", title: "Steel cables", images: partPhotos.slice(10), desc: "High-strength steel cables, tested for maximum loads and complete safety." },
+    { key: "motor", title: "Traction motor", images: partMediaByType.motors, desc: "Powerful, durable traction motors that ensure a smooth and efficient ride." },
+    { key: "kabina", title: "Cabin", images: partMediaByType.cabins, desc: "Customizable cabins with quality materials, lighting and finishes to your taste." },
+    { key: "butona", title: "Buttons & panel", images: partMediaByType.buttons, desc: "Modern, durable and easy-to-use button panels with LED lighting." },
+    { key: "litaret", title: "Steel cables", images: partMediaByType.cables, desc: "High-strength steel cables, tested for maximum loads and complete safety." },
   ],
 };
 

@@ -10,6 +10,8 @@ export const InteractiveShowcase = ({ items, buttonLabel, testidPrefix, lang }) 
   const [activePhoto, setActivePhoto] = useState(0);
   const current = items[active];
   const photos = current.images || [current.image];
+  const activeMedia = photos[activePhoto];
+  const isVideo = (media) => /\.mp4(?:$|\?)/i.test(media);
 
   return (
     <div data-testid={`${testidPrefix}-showcase`} className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
@@ -55,7 +57,11 @@ export const InteractiveShowcase = ({ items, buttonLabel, testidPrefix, lang }) 
             data-testid={`${testidPrefix}-detail`}
           >
             <div className="relative overflow-hidden">
-              <img src={photos[activePhoto]} alt={current.title} className="w-full aspect-[4/3] object-contain bg-black/5" />
+              {isVideo(activeMedia) ? (
+                <video src={activeMedia} controls className="w-full aspect-[4/3] object-contain bg-black" />
+              ) : (
+                <img src={activeMedia} alt={current.title} className="w-full aspect-[4/3] object-contain bg-black/5" />
+              )}
               {current.tag && (
                 <span className="absolute top-4 left-4 bg-white/90 backdrop-blur px-4 py-2 text-xs uppercase tracking-[0.15em] font-bold text-brick">
                   {current.tag}
@@ -74,7 +80,11 @@ export const InteractiveShowcase = ({ items, buttonLabel, testidPrefix, lang }) 
                       index === activePhoto ? "border-brick" : "border-transparent hover:border-black/30"
                     }`}
                   >
-                    <img src={photo} alt="" className="h-full w-full object-contain bg-black/5" />
+                    {isVideo(photo) ? (
+                      <video src={photo} muted preload="metadata" className="h-full w-full object-contain bg-black" />
+                    ) : (
+                      <img src={photo} alt="" className="h-full w-full object-contain bg-black/5" />
+                    )}
                   </button>
                 ))}
               </div>
