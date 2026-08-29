@@ -1,40 +1,28 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import React, { useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { MousePointerClick } from "lucide-react";
 import { useLang } from "../context/LanguageContext";
 import { t } from "../lib/content";
 
 /*
- * Signature moment: a full-screen elevator whose doors slide open as the
- * user scrolls, revealing the hero content behind them.
+ * Signature moment: a full-screen elevator whose doors open on one click,
+ * revealing the hero content behind them.
  */
 export const ElevatorStage = ({ children }) => {
   const { lang } = useLang();
   const reduce = useReducedMotion();
-  const stageRef = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: stageRef,
-    offset: ["start start", "end start"],
-  });
-
-  const leftX = useTransform(scrollYProgress, [0, 0.75], ["0%", "-101%"]);
-  const rightX = useTransform(scrollYProgress, [0, 0.75], ["0%", "101%"]);
-  const heroScale = useTransform(scrollYProgress, [0, 0.75], [1.18, 1]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [0.25, 1]);
-  const hintOpacity = useTransform(scrollYProgress, [0, 0.12], [1, 0]);
-  const seamOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const [isOpen, setIsOpen] = useState(false);
 
   if (reduce) {
     return <div className="relative min-h-screen">{children}</div>;
   }
 
   return (
-    <section ref={stageRef} data-testid="elevator-stage" className="relative h-[240vh]">
-      <div className="sticky top-0 h-screen w-full overflow-hidden bg-white">
+    <section data-testid="elevator-stage" className="relative h-screen overflow-hidden bg-white">
         {/* Hero behind the doors */}
         <motion.div
-          style={{ scale: heroScale, opacity: heroOpacity }}
+          animate={{ scale: isOpen ? 1 : 1.18, opacity: isOpen ? 1 : 0.25 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
           className="absolute inset-0"
         >
           {children}
@@ -42,7 +30,8 @@ export const ElevatorStage = ({ children }) => {
 
         {/* LEFT DOOR */}
         <motion.div
-          style={{ x: leftX }}
+          animate={{ x: isOpen ? "-101%" : "0%" }}
+          transition={{ duration: 1.15, ease: [0.76, 0, 0.24, 1] }}
           className="door-metal absolute left-0 top-0 h-full w-1/2 z-40 shadow-[inset_-40px_0_60px_-30px_rgba(0,0,0,0.35)]"
         >
           <DoorFace side="left" lang={lang} />
@@ -50,7 +39,8 @@ export const ElevatorStage = ({ children }) => {
 
         {/* RIGHT DOOR */}
         <motion.div
-          style={{ x: rightX }}
+          animate={{ x: isOpen ? "101%" : "0%" }}
+          transition={{ duration: 1.15, ease: [0.76, 0, 0.24, 1] }}
           className="door-metal absolute right-0 top-0 h-full w-1/2 z-40 shadow-[inset_40px_0_60px_-30px_rgba(0,0,0,0.35)]"
         >
           <DoorFace side="right" lang={lang} />
@@ -58,14 +48,24 @@ export const ElevatorStage = ({ children }) => {
 
         {/* Center seam */}
         <motion.div
-          style={{ opacity: seamOpacity }}
+          animate={{ opacity: isOpen ? 0 : 1 }}
+          transition={{ duration: 0.6 }}
           className="absolute left-1/2 top-0 h-full w-[3px] -translate-x-1/2 bg-gradient-to-b from-brick/0 via-brick to-brick/0 z-50 pointer-events-none"
         />
 
-        {/* Scroll hint */}
+        {/* Click target and hint */}
+        <button
+          type="button"
+          onClick={() => setIsOpen(true)}
+          disabled={isOpen}
+          aria-label={t[lang].doorHint}
+          data-testid="elevator-open-button"
+          className={`absolute inset-0 z-[60] cursor-pointer ${isOpen ? "pointer-events-none" : ""}`}
+        />
         <motion.div
-          style={{ opacity: hintOpacity }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-2 pointer-events-none"
+          animate={{ opacity: isOpen ? 0 : 1, y: isOpen ? 12 : 0 }}
+          transition={{ duration: 0.3 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-[70] flex flex-col items-center gap-2 pointer-events-none"
         >
           <span className="text-xs uppercase tracking-[0.3em] text-ink/70 font-semibold">
             {t[lang].doorHint}
@@ -74,10 +74,9 @@ export const ElevatorStage = ({ children }) => {
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
           >
-            <ChevronDown size={22} className="text-brick" />
+            <MousePointerClick size={22} className="text-brick" />
           </motion.div>
         </motion.div>
-      </div>
     </section>
   );
 };

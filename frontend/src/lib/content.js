@@ -83,7 +83,7 @@ const partMediaByType = {
 export const t = {
   sq: {
     nav: { home: "Ballina", services: "Çfarë Ofrojmë", about: "Rreth Nesh", cta: "Na Kontakto" },
-    doorHint: "Rrëshqit për të hapur",
+    doorHint: "Kliko për të hapur",
     hero: {
       tag: "Showroom Ashensorësh · Prishtinë",
       line1: "Ngritja juaj,",
@@ -136,7 +136,7 @@ export const t = {
   },
   en: {
     nav: { home: "Home", services: "What We Offer", about: "About", cta: "Contact Us" },
-    doorHint: "Scroll to open",
+    doorHint: "Click to open",
     hero: {
       tag: "Elevator Showroom · Pristina",
       line1: "Your rise,",
