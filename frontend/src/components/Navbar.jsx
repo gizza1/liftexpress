@@ -8,9 +8,9 @@ import { t, COMPANY } from "../lib/content";
 const Logo = () => (
   <Link to="/" data-testid="nav-logo" className="flex items-center group">
     <img
-      src="/lift-express-logo.png"
-      alt="Lift Express sh.p.k"
-      className="h-11 w-36 md:h-14 md:w-48 object-contain object-left transition-transform duration-500 group-hover:scale-[1.03]"
+      src="/liftexpress-showroom-logo.png"
+      alt="LiftExpress Showroom"
+      className="h-14 w-20 md:h-16 md:w-24 object-contain object-left transition-transform duration-500 group-hover:scale-[1.03]"
     />
   </Link>
 );

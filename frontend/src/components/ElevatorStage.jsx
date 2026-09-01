@@ -65,7 +65,7 @@ export const ElevatorStage = ({ children }) => {
         <motion.div
           animate={{ opacity: isOpen ? 0 : 1, y: isOpen ? 12 : 0 }}
           transition={{ duration: 0.3 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-[70] flex flex-col items-center gap-2 pointer-events-none"
+          className="absolute bottom-[11%] left-1/2 -translate-x-1/2 z-[70] flex flex-col items-center gap-2 pointer-events-none"
         >
           <span className="text-xs uppercase tracking-[0.3em] text-ink/70 font-semibold">
             {t[lang].doorHint}
@@ -99,10 +99,10 @@ const DoorFace = ({ side, lang }) => (
       doors slide apart.
     */}
     <div
-      className="absolute top-1/2 -translate-y-1/2 h-[42vh] w-[42vh]"
-      style={side === "left" ? { right: "-21vh" } : { left: "-21vh" }}
+      className="absolute top-1/2 -translate-y-1/2 h-[58vh] w-[58vh]"
+      style={side === "left" ? { right: "-29vh" } : { left: "-29vh" }}
     >
-      <img src="/lift-express-mark.png" alt="" className="h-full w-full object-contain drop-shadow-sm" />
+      <img src="/liftexpress-showroom-logo.png" alt="" className="h-full w-full object-contain drop-shadow-sm" />
     </div>
 
     {/* subtle top light strip */}
