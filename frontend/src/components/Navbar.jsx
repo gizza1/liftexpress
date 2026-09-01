@@ -6,16 +6,12 @@ import { useLang } from "../context/LanguageContext";
 import { t, COMPANY } from "../lib/content";
 
 const Logo = () => (
-  <Link to="/" data-testid="nav-logo" className="flex items-center gap-3 group">
+  <Link to="/" data-testid="nav-logo" className="flex items-center group">
     <img
-      src="/liftexpress.png"
+      src="/lift-express-logo.png"
       alt="Lift Express sh.p.k"
-      className="h-9 w-9 md:h-11 md:w-11 object-contain transition-transform duration-500 group-hover:rotate-6"
+      className="h-11 w-36 md:h-14 md:w-48 object-contain object-left transition-transform duration-500 group-hover:scale-[1.03]"
     />
-    <span className="font-display text-lg md:text-xl tracking-tight leading-none hidden sm:block">
-      LIFT<span className="text-brick">EXPRESS</span>
-      <span className="block text-[9px] md:text-[10px] tracking-[0.35em] text-ash font-sans font-bold mt-0.5">SHOWROOM</span>
-    </span>
   </Link>
 );
 

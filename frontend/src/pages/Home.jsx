@@ -14,7 +14,7 @@ const HeroContent = () => {
   return (
     <div className="relative h-full w-full">
       <div className="absolute inset-0">
-        <img src={IMAGES.heroShaft} alt="" className="h-full w-full object-cover grayscale opacity-[0.10]" />
+        <img src={IMAGES.heroShaft} alt="" className="h-full w-full object-contain bg-white grayscale opacity-[0.10]" />
       </div>
       <div className="relative h-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center">
         <motion.span
@@ -96,8 +96,8 @@ const ShowroomSection = () => {
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <Reveal>
           <div className="grid grid-cols-2 gap-4">
-            <img src={IMAGES.showroom1} alt="Showroom" className="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700" />
-            <img src={IMAGES.showroom2} alt="Showroom" className="w-full aspect-[3/4] object-cover mt-8 grayscale hover:grayscale-0 transition-all duration-700" />
+            <img src={IMAGES.showroom1} alt="Showroom" className="w-full aspect-[3/4] object-contain bg-black/5 grayscale hover:grayscale-0 transition-all duration-700" />
+            <img src={IMAGES.showroom2} alt="Showroom" className="w-full aspect-[3/4] object-contain bg-black/5 mt-8 grayscale hover:grayscale-0 transition-all duration-700" />
           </div>
         </Reveal>
         <Reveal delay={0.15}>
@@ -162,7 +162,7 @@ const Servicing = () => {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ backgroundImage: `url(${IMAGES.technician})`, backgroundSize: "cover", backgroundPosition: "center" }}
+      style={{ backgroundImage: `url(${IMAGES.technician})`, backgroundSize: "contain", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#0a0a0a" }}
     >
       <div className="absolute inset-0 bg-ink/92" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 text-white grid lg:grid-cols-2 gap-12 items-center">
@@ -199,7 +199,7 @@ const Manifesto = () => {
             <span className="text-xs uppercase tracking-[0.25em] font-bold text-brick">{m.label}</span>
             <h2 className="font-display text-4xl lg:text-5xl tracking-tight mt-4 leading-tight">{m.title}</h2>
             <div className="mt-8 aspect-[3/4] overflow-hidden">
-              <img src={IMAGES.cabinWood} alt="" className="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+              <img src={IMAGES.cabinWood} alt="" className="h-full w-full object-contain bg-black/5 grayscale hover:grayscale-0 transition-all duration-700" />
             </div>
           </Reveal>
         </div>
@@ -227,7 +227,7 @@ const CtaBand = () => {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ backgroundImage: `url(${IMAGES.installers})`, backgroundSize: "cover", backgroundPosition: "center" }}
+      style={{ backgroundImage: `url(${IMAGES.installers})`, backgroundSize: "contain", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#a5262b" }}
     >
       <div className="absolute inset-0 bg-brick/95" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 text-white">

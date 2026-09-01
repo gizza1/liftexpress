@@ -10,75 +10,15 @@ export const COMPANY = {
 };
 
 export const IMAGES = {
-  heroShaft: "https://images.unsplash.com/photo-1532707898156-d21be2c005c1?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  glassLobby: "https://images.unsplash.com/photo-1566096650255-98ba2641071e?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  showroom1: "https://images.unsplash.com/photo-1763734546247-83a8792bf0eb?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  showroom2: "https://images.unsplash.com/photo-1770910196472-6936b9639687?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  cabinWood: "https://images.unsplash.com/photo-1592256410394-51c948ec13d5?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  cabinBlue: "https://images.unsplash.com/photo-1547630824-eed1be6a27b0?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  cabinWork: "https://images.unsplash.com/photo-1573358575417-a421c842be5a?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  freight: "https://images.unsplash.com/photo-1532635042-a6f6ad4745f9?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  whiteRoom: "https://images.unsplash.com/photo-1624342057927-64d60f69b94d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  steelFrames: "https://images.unsplash.com/photo-1596711684682-2f3ea5d2d739?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  grayFrames: "https://images.unsplash.com/photo-1543593450-4faaab9a0f6e?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  buttons: "https://images.unsplash.com/photo-1563340012-9a46fb6a29ff?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  panel: "https://images.unsplash.com/photo-1562654501-9a587e8638d8?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  doorClosed: "https://images.unsplash.com/photo-1631248979010-6775b0c88180?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  technician: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  installers: "https://images.unsplash.com/photo-1540476547779-348beb642680?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
+  heroShaft: "/media/catalog/lifts/lift per shtepi-banes/lift per shtepi.jpg",
+  glassLobby: "/media/catalog/lifts/lift per shtepi-banes/lift per shtepi2.jpg",
+  showroom1: "/media/catalog/parts/kabinat/kabin.jpg",
+  showroom2: "/media/catalog/parts/kabinat/kabin2.jpg",
+  cabinWood: "/media/catalog/parts/kabinat/kabin3.jpg",
+  technician: "/media/catalog/lifts/lift industruial/viber_image_2026-09-01_20-45-31-282.jpg",
+  installers: "/media/catalog/projects/viber_image_2026-09-01_20-46-40-211.jpg",
 };
 
-// Media supplied by LiftExpress. Keeping these paths local means they are
-// included with the site on deployment instead of depending on a desktop folder.
-const liftPhotos = [
-  "/media/lifts/Screenshot 2026-08-14 222700.png", "/media/lifts/Screenshot 2026-08-14 222718.png", "/media/lifts/Screenshot 2026-08-14 222741.png",
-  "/media/lifts/viber_image_2026-07-14_23-15-21-169.jpg", "/media/lifts/viber_image_2026-07-14_23-15-21-209.jpg", "/media/lifts/viber_image_2026-07-14_23-15-21-321.jpg",
-  "/media/lifts/viber_image_2026-07-14_23-15-21-380.jpg", "/media/lifts/viber_image_2026-07-14_23-15-21-433.jpg", "/media/lifts/viber_image_2026-07-14_23-15-21-646.jpg",
-  "/media/lifts/viber_image_2026-07-14_23-15-22-341.jpg", "/media/lifts/viber_image_2026-07-14_23-17-17-688.jpg", "/media/lifts/viber_image_2026-07-14_23-17-17-717.jpg",
-  "/media/lifts/viber_image_2026-07-14_23-17-17-745.jpg", "/media/lifts/viber_image_2026-07-14_23-21-04-923.jpg",
-];
-
-const partPhotos = [
-  "/media/parts/viber_image_2026-07-14_23-18-44-419.jpg", "/media/parts/viber_image_2026-07-14_23-18-44-615.jpg", "/media/parts/viber_image_2026-07-14_23-18-44-687.jpg", "/media/parts/viber_image_2026-07-14_23-18-44-949.jpg",
-  "/media/parts/viber_image_2026-07-14_23-18-45-148.jpg", "/media/parts/viber_image_2026-07-14_23-18-45-823.jpg", "/media/parts/viber_image_2026-07-14_23-18-45-860.jpg", "/media/parts/viber_image_2026-07-14_23-18-45-890.jpg",
-  "/media/parts/viber_image_2026-07-14_23-18-45-924.jpg", "/media/parts/viber_image_2026-07-14_23-18-46-087.jpg", "/media/parts/viber_image_2026-07-14_23-18-46-172.jpg", "/media/parts/viber_image_2026-07-14_23-18-46-365.jpg",
-  "/media/parts/viber_image_2026-07-14_23-18-46-509.jpg", "/media/parts/viber_image_2026-07-14_23-18-46-608.jpg", "/media/parts/viber_image_2026-07-14_23-18-46-694.jpg", "/media/parts/viber_image_2026-07-14_23-18-47-060.jpg",
-  "/media/parts/viber_image_2026-07-14_23-18-47-093.jpg", "/media/parts/viber_image_2026-07-14_23-18-47-181.jpg",
-];
-
-const buttonPhotos = [
-  "/media/buttons/viber_image_2026-07-14_23-17-48-231.jpg", "/media/buttons/viber_image_2026-07-14_23-17-48-270.jpg", "/media/buttons/viber_image_2026-07-14_23-17-48-307.jpg", "/media/buttons/viber_image_2026-07-14_23-17-48-342.jpg",
-  "/media/buttons/viber_image_2026-07-14_23-17-48-374.jpg", "/media/buttons/viber_image_2026-07-14_23-17-48-395.jpg", "/media/buttons/viber_image_2026-07-14_23-17-48-424.jpg", "/media/buttons/viber_image_2026-07-14_23-17-48-484.jpg",
-  "/media/buttons/viber_image_2026-07-14_23-17-48-544.jpg", "/media/buttons/viber_image_2026-07-14_23-17-48-608.jpg", "/media/buttons/viber_image_2026-07-14_23-17-48-654.jpg", "/media/buttons/viber_image_2026-07-14_23-17-48-700.jpg",
-  "/media/buttons/viber_image_2026-07-14_23-17-48-749.jpg",
-];
-
-// Folder-based grouping from the supplied media library.
-const liftMediaByType = {
-  industrial: ["/media/lifts/industrial/viber_image_2026-07-14_23-21-04-923.jpg"],
-  kitchen: ["/media/lifts/kitchen/viber_image_2026-07-14_23-17-17-688.jpg"],
-  home: [
-    "/media/lifts/home/Screenshot 2026-08-14 222700.png", "/media/lifts/home/Screenshot 2026-08-14 222718.png", "/media/lifts/home/Screenshot 2026-08-14 222741.png",
-    "/media/lifts/home/viber_image_2026-07-14_23-15-21-209.jpg", "/media/lifts/home/viber_image_2026-07-14_23-15-21-321.jpg", "/media/lifts/home/viber_image_2026-07-14_23-15-21-380.jpg",
-    "/media/lifts/home/viber_image_2026-07-14_23-15-21-646.jpg", "/media/lifts/home/viber_image_2026-07-14_23-17-17-717.jpg", "/media/lifts/home/viber_image_2026-07-14_23-17-17-745.jpg",
-  ],
-  accessibility: ["/media/lifts/accessibility/0-02-05-eaa55d858ec4a5ab15164dc26604b9653175e017835d9ed0fd320554744f011f_ef340a47e813790c.mp4"],
-};
-
-const partMediaByType = {
-  buttons: buttonPhotos.map((photo) => photo.replace("/media/buttons/", "/media/parts/buttons/")),
-  cabins: [
-    "/media/parts/cabins/Screenshot 2026-08-14 222700.png", "/media/parts/cabins/Screenshot 2026-08-14 222718.png", "/media/parts/cabins/Screenshot 2026-08-14 222741.png",
-    "/media/parts/cabins/viber_image_2026-07-14_23-15-21-209.jpg", "/media/parts/cabins/viber_image_2026-07-14_23-15-21-321.jpg", "/media/parts/cabins/viber_image_2026-07-14_23-15-21-380.jpg", "/media/parts/cabins/viber_image_2026-07-14_23-15-21-646.jpg",
-  ],
-  cables: ["/media/parts/cables/litar lifti 2.png", "/media/parts/cables/litar lifti.webp"],
-  motors: [
-    "/media/parts/motors/ChatGPT Image Aug 15, 2026, 12_04_12 AM.png", "/media/parts/motors/viber_image_2026-07-14_23-18-44-419.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-44-615.jpg",
-    "/media/parts/motors/viber_image_2026-07-14_23-18-44-949.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-45-148.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-45-823.jpg",
-    "/media/parts/motors/viber_image_2026-07-14_23-18-45-860.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-45-924.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-46-087.jpg",
-    "/media/parts/motors/viber_image_2026-07-14_23-18-46-172.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-46-365.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-46-694.jpg", "/media/parts/motors/viber_image_2026-07-14_23-18-47-093.jpg",
-  ],
-};
 
 export const t = {
   sq: {
@@ -211,39 +151,54 @@ export const offerPage = {
 
 export const liftTypes = {
   sq: [
-    { key: "industrial", title: "Ashensor industrial / i mallrave", tag: "Kapacitet i lartë", images: liftMediaByType.industrial, desc: "Ashensorë të fuqishëm për transport mallrash e ngarkesash të rënda në fabrika, depo dhe objekte industriale, me qëndrueshmëri maksimale." },
-    { key: "aksesueshmeri", title: "Platformë për persona me aftësi të kufizuara", tag: "Aksesueshmëri", images: liftMediaByType.accessibility, desc: "Platforma ngritëse dhe ashensorë të aksesueshëm që mundësojnë lëvizje të sigurt për persona me aftësi të kufizuara — brenda dhe jashtë objekteve." },
-    { key: "banesor", title: "Ashensor elektrik për banesa & shtëpi", tag: "Shtëpi private", images: liftMediaByType.home, desc: "Zgjidhje kompakte elektrike për shtëpi private dhe objekte banimi, me konsum të ulët energjie dhe instalim të thjeshtë." },
-    { key: "kuzhine", title: "Ashensor kuzhine (montakarikë)", tag: "Restorante & hotele", images: liftMediaByType.kitchen, desc: "Ashensorë të vegjël për transport ushqimi e pjatash mes kateve — të domosdoshëm për restorante, hotele dhe kuzhina profesionale." },
+    { key: "industrial", title: "lift industruial", tag: "Liftat", images: ["/media/catalog/lifts/lift industruial/viber_image_2026-09-01_20-45-31-282.jpg"], desc: "Zgjidhje për objekte industriale dhe ngarkesa të rënda." },
+    { key: "kuzhine", title: "lift per kuzhine", tag: "Liftat", images: ["/media/catalog/lifts/lift per kuzhine/viber_image_2026-07-14_23-17-17-688.jpg"], desc: "Lift praktik për transport mes kateve në kuzhina profesionale." },
+    { key: "makina", title: "lift per makina", tag: "Liftat", images: ["/media/catalog/lifts/lift per makina/ChatGPT Image Sep 1, 2026, 10_13_47 PM.png", "/media/catalog/lifts/lift per makina/lift per makina 22.jpg", "/media/catalog/lifts/lift per makina/viber_image_2026-09-01_20-45-31-110.jpg", "/media/catalog/lifts/lift per makina/viber_image_2026-09-01_20-45-31-130.jpg"], desc: "Platforma dhe liftat e projektuar për automjete." },
+    { key: "shtepi", title: "lift per shtepi-banes", tag: "Liftat", images: ["/media/catalog/lifts/lift per shtepi-banes/ChatGPT Image Sep 1, 2026, 10_27_52 PM.png", "/media/catalog/lifts/lift per shtepi-banes/lift per shtepi.jpg", "/media/catalog/lifts/lift per shtepi-banes/lift per shtepi2.jpg", "/media/catalog/lifts/lift per shtepi-banes/lift per shtepi3.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-07-14_23-17-17-717.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-07-14_23-17-17-745.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-07-14_23-21-04-923.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-09-01_20-45-30-899.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-09-01_20-45-30-936.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-09-01_20-45-30-998.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-09-01_20-45-31-016.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-09-01_20-45-31-247.jpg"], desc: "Liftat për shtëpi dhe banesa, me zgjidhje të përshtatura për hapësirën tuaj." },
+    { key: "aftesi", title: "platforme per persona me aftesi te kufizuara", tag: "Liftat", images: ["/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift akses te lehte.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per akses te lehte2.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per akses te lehte3.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per persona me aftesi te kufizuara.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per persona me aftesi te kufizuara2.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per persona me aftesi te kufizuara3.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per persona me aftesi te kufizuara4jpg.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per shkall.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per shkall 2.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per shkall 3.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per shkall 4.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/0-02-05-eaa55d858ec4a5ab15164dc26604b9653175e017835d9ed0fd320554744f011f_ef340a47e813790c.mp4"], desc: "Platforma që lehtësojnë lëvizjen e sigurt dhe të pavarur." },
   ],
   en: [
-    { key: "industrial", title: "Industrial / freight elevator", tag: "High capacity", images: liftMediaByType.industrial, desc: "Powerful elevators for transporting goods and heavy loads in factories, warehouses and industrial facilities, with maximum durability." },
-    { key: "aksesueshmeri", title: "Accessibility platform lift", tag: "Accessibility", images: liftMediaByType.accessibility, desc: "Lifting platforms and accessible elevators enabling safe movement for people with disabilities — indoors and outdoors." },
-    { key: "banesor", title: "Electric home elevator", tag: "Private homes", images: liftMediaByType.home, desc: "Compact electric solutions for private houses and residential buildings, with low energy consumption and simple installation." },
-    { key: "kuzhine", title: "Kitchen dumbwaiter", tag: "Restaurants & hotels", images: liftMediaByType.kitchen, desc: "Small elevators for transporting food and dishes between floors — essential for restaurants, hotels and professional kitchens." },
+    { key: "industrial", title: "lift industruial", tag: "Lifts", images: ["/media/catalog/lifts/lift industruial/viber_image_2026-09-01_20-45-31-282.jpg"], desc: "Solutions for industrial facilities and heavy loads." },
+    { key: "kuzhine", title: "lift per kuzhine", tag: "Lifts", images: ["/media/catalog/lifts/lift per kuzhine/viber_image_2026-07-14_23-17-17-688.jpg"], desc: "A practical lift for moving items between floors in professional kitchens." },
+    { key: "makina", title: "lift per makina", tag: "Lifts", images: ["/media/catalog/lifts/lift per makina/ChatGPT Image Sep 1, 2026, 10_13_47 PM.png", "/media/catalog/lifts/lift per makina/lift per makina 22.jpg", "/media/catalog/lifts/lift per makina/viber_image_2026-09-01_20-45-31-110.jpg", "/media/catalog/lifts/lift per makina/viber_image_2026-09-01_20-45-31-130.jpg"], desc: "Vehicle lifting platforms and systems." },
+    { key: "shtepi", title: "lift per shtepi-banes", tag: "Lifts", images: ["/media/catalog/lifts/lift per shtepi-banes/ChatGPT Image Sep 1, 2026, 10_27_52 PM.png", "/media/catalog/lifts/lift per shtepi-banes/lift per shtepi.jpg", "/media/catalog/lifts/lift per shtepi-banes/lift per shtepi2.jpg", "/media/catalog/lifts/lift per shtepi-banes/lift per shtepi3.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-07-14_23-17-17-717.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-07-14_23-17-17-745.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-07-14_23-21-04-923.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-09-01_20-45-30-899.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-09-01_20-45-30-936.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-09-01_20-45-30-998.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-09-01_20-45-31-016.jpg", "/media/catalog/lifts/lift per shtepi-banes/viber_image_2026-09-01_20-45-31-247.jpg"], desc: "Lifts for homes and residences, adapted to your space." },
+    { key: "aftesi", title: "platforme per persona me aftesi te kufizuara", tag: "Lifts", images: ["/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift akses te lehte.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per akses te lehte2.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per akses te lehte3.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per persona me aftesi te kufizuara.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per persona me aftesi te kufizuara2.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per persona me aftesi te kufizuara3.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per persona me aftesi te kufizuara4jpg.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per shkall.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per shkall 2.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per shkall 3.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/lift per shkall 4.jpg", "/media/catalog/lifts/platforme per persona me aftesi te kufizuara/0-02-05-eaa55d858ec4a5ab15164dc26604b9653175e017835d9ed0fd320554744f011f_ef340a47e813790c.mp4"], desc: "Platforms for safe, independent access." },
   ],
 };
 
 export const partsList = {
   sq: [
-    { key: "motor", title: "Motori tërheqës", images: partMediaByType.motors, desc: "Motorë tërheqës të fuqishëm dhe të qëndrueshëm që sigurojnë lëvizje të butë dhe efikase." },
-    { key: "kabina", title: "Kabina", images: partMediaByType.cabins, desc: "Kabina të personalizueshme me materiale cilësore, ndriçim dhe finish sipas dëshirës." },
-    { key: "butona", title: "Butonat & paneli", images: partMediaByType.buttons, desc: "Panele butonash moderne, të qëndrueshme dhe të lehta për përdorim, me ndriçim LED." },
-    { key: "litaret", title: "Litarët e çelikut", images: partMediaByType.cables, desc: "Litarë çeliku me rezistencë të lartë, të testuar për ngarkesa maksimale dhe siguri të plotë." },
+    { key: "arcoder", title: "arcoder", images: ["/media/catalog/parts/arcoder/arcoder.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "armotizer", title: "armotizer", images: ["/media/catalog/parts/armotizer/armotizer.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "brava", title: "brava te deres", images: ["/media/catalog/parts/brava te deres/brava te deres.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "butonat", title: "butonat", images: ["/media/catalog/parts/butonat/touch panel.jpg", "/media/catalog/parts/butonat/viber_image_2026-07-14_23-17-48-231.jpg", "/media/catalog/parts/butonat/viber_image_2026-07-14_23-17-48-270.jpg", "/media/catalog/parts/butonat/viber_image_2026-07-14_23-17-48-307.jpg", "/media/catalog/parts/butonat/viber_image_2026-07-14_23-17-48-342.jpg", "/media/catalog/parts/butonat/viber_image_2026-07-14_23-17-48-374.jpg", "/media/catalog/parts/butonat/viber_image_2026-07-14_23-17-48-395.jpg", "/media/catalog/parts/butonat/viber_image_2026-07-14_23-17-48-424.jpg", "/media/catalog/parts/butonat/viber_image_2026-07-14_23-17-48-484.jpg", "/media/catalog/parts/butonat/viber_image_2026-07-14_23-17-48-544.jpg", "/media/catalog/parts/butonat/viber_image_2026-07-14_23-17-48-608.jpg", "/media/catalog/parts/butonat/viber_image_2026-07-14_23-17-48-654.jpg", "/media/catalog/parts/butonat/viber_image_2026-07-14_23-17-48-700.jpg", "/media/catalog/parts/butonat/viber_image_2026-07-14_23-17-48-749.jpg"], desc: "Panele dhe butona për ashensorë." },
+    { key: "enca", title: "enca pllak", images: ["/media/catalog/parts/enca pllak/enca pllak.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "encoder", title: "encoder", images: ["/media/catalog/parts/encoder/encoder.jpg", "/media/catalog/parts/encoder/encoder2.jpg", "/media/catalog/parts/encoder/encoder3.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "fren", title: "fren emergjent", images: ["/media/catalog/parts/fren emergjent/fren emergjent.jpg", "/media/catalog/parts/fren emergjent/frenat emergjent.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "invertor", title: "invertor", images: ["/media/catalog/parts/invertor/invertor.jpg", "/media/catalog/parts/invertor/invertor2.jpg", "/media/catalog/parts/invertor/invertor3.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "kabinat", title: "kabinat", images: ["/media/catalog/parts/kabinat/ChatGPT Image Sep 1, 2026, 10_32_51 PM.png", "/media/catalog/parts/kabinat/kabin.jpg", "/media/catalog/parts/kabinat/kabin2.jpg", "/media/catalog/parts/kabinat/kabin3.jpg", "/media/catalog/parts/kabinat/kabin4.jpg", "/media/catalog/parts/kabinat/kabin5.jpg"], desc: "Kabina të personalizueshme për ashensorë." },
+    { key: "litar", title: "litari terheqes", images: ["/media/catalog/parts/litari terheqes/litar lifti 2.png", "/media/catalog/parts/litari terheqes/litar lifti.webp"], desc: "Litarë të qëndrueshëm për sistemin tërheqës." },
+    { key: "magnet", title: "magnet pomp", images: ["/media/catalog/parts/magnet pomp/magnet pomp.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "mekanizem", title: "mekanizem i deres", images: ["/media/catalog/parts/mekanizem i deres/mekanizem i deres.jpg", "/media/catalog/parts/mekanizem i deres/mekanizem i deres3.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "motor", title: "motori terheqes", images: ["/media/catalog/parts/motori terheqes/motorr ashensori.jpg", "/media/catalog/parts/motori terheqes/motorr ashensori 2.jpg", "/media/catalog/parts/motori terheqes/motorr ashensori 3.jpg", "/media/catalog/parts/motori terheqes/motorr ashensori4.jpg", "/media/catalog/parts/motori terheqes/motorr ashensori 5.jpg"], desc: "Motorë tërheqës të fuqishëm dhe të qëndrueshëm." },
+    { key: "dyer", title: "motorr per dyer", images: ["/media/catalog/parts/motorr per dyer/motorr per dyer.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "drita", title: "nderoreres dritash", images: ["/media/catalog/parts/nderoreres dritash/nderpreres dritash.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "overload", title: "overload", images: ["/media/catalog/parts/overload/overload.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "rregullues", title: "rregullues shpejtesie", images: ["/media/catalog/parts/rregullues shpejtesie/rregullator shpejtsie.jpg", "/media/catalog/parts/rregullues shpejtesie/rregullator shpejtsie2.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "rreshqitesa", title: "rreshqitesa", images: ["/media/catalog/parts/rreshqitesa/rreshqitesa.jpg", "/media/catalog/parts/rreshqitesa/mbajtes rresqitez.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "shisa", title: "shisa per shkall", images: ["/media/catalog/parts/shisa per shkall/shisa per shkall.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
+    { key: "trafo", title: "trafo", images: ["/media/catalog/parts/trafo/trafo.jpg"], desc: "Pjesë origjinale për sistemin e ashensorit." },
   ],
-  en: [
-    { key: "motor", title: "Traction motor", images: partMediaByType.motors, desc: "Powerful, durable traction motors that ensure a smooth and efficient ride." },
-    { key: "kabina", title: "Cabin", images: partMediaByType.cabins, desc: "Customizable cabins with quality materials, lighting and finishes to your taste." },
-    { key: "butona", title: "Buttons & panel", images: partMediaByType.buttons, desc: "Modern, durable and easy-to-use button panels with LED lighting." },
-    { key: "litaret", title: "Steel cables", images: partMediaByType.cables, desc: "High-strength steel cables, tested for maximum loads and complete safety." },
-  ],
+  en: [],
 };
 
+partsList.en = partsList.sq.map((part) => ({ ...part, tag: "Parts", desc: "Original parts for elevator systems." }));
+
 export const workExamples = [
-  { image: "/media/projects/0-02-05-771098a34abbc9e86113793b0346b89d89edef08b7141e259938d5d4acd9e603_c8188d762dce9cab - Trim.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
-  { image: "/media/projects/0-02-05-9b1a7d33b36eab8001ebbee1ced1f2e4e2c0c4aa39792bcfdf4f5ebc12dd0d1d_3f25ab1777923db7 - Trim.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
-  { image: "/media/projects/viber_image_2026-07-14_23-21-05-022.jpg", type: "image", sq: "Projekt i realizuar", en: "Completed project" },
-  { image: "/media/projects/viber_image_2026-07-14_23-21-05-622.jpg", type: "image", sq: "Projekt i realizuar", en: "Completed project" },
+  { image: "/media/catalog/projects/0-02-05-2f8c3d45504f6ded6cca6eb2f2e440ef0bf8a80cc01c6b6b4dd68b4fafca7f63_932e198b3c8ae46d.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
+  { image: "/media/catalog/projects/0-02-05-3150699f3c1763261cfdcb0457a26fbe0b2f7898505e5659583f3a16e957fd90_782d5e9534902a6.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
+  { image: "/media/catalog/projects/viber_image_2026-09-01_20-45-33-874.jpg", type: "image", sq: "Projekt i realizuar", en: "Completed project" },
+  { image: "/media/catalog/projects/viber_image_2026-09-01_20-46-40-211.jpg", type: "image", sq: "Projekt i realizuar", en: "Completed project" },
 ];
 
 // PAGE 3 — About + Contact

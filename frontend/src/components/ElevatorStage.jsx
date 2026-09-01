@@ -102,7 +102,7 @@ const DoorFace = ({ side, lang }) => (
       className="absolute top-1/2 -translate-y-1/2 h-[42vh] w-[42vh]"
       style={side === "left" ? { right: "-21vh" } : { left: "-21vh" }}
     >
-      <img src="/liftexpress.png" alt="" className="h-full w-full object-contain drop-shadow-sm" />
+      <img src="/lift-express-mark.png" alt="" className="h-full w-full object-contain drop-shadow-sm" />
     </div>
 
     {/* subtle top light strip */}

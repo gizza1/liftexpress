@@ -35,7 +35,7 @@ export default function AboutContact() {
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid md:grid-cols-2 gap-12 md:gap-16 items-center border-t border-black/10">
         <Reveal>
           <div className="relative overflow-hidden">
-            <img src={IMAGES.glassLobby} alt="" className="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+            <img src={IMAGES.glassLobby} alt="" className="w-full aspect-[4/5] object-contain bg-black/5 grayscale hover:grayscale-0 transition-all duration-700" />
           </div>
         </Reveal>
         <Reveal delay={0.15}>
