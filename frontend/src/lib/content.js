@@ -199,8 +199,8 @@ partsList.en = partsList.sq.map((part) => ({ ...part, tag: "Parts", desc: "Origi
 export const workExamples = [
   { image: "/media/catalog/projects/0-02-05-2f8c3d45504f6ded6cca6eb2f2e440ef0bf8a80cc01c6b6b4dd68b4fafca7f63_932e198b3c8ae46d.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
   { image: "/media/catalog/projects/0-02-05-3150699f3c1763261cfdcb0457a26fbe0b2f7898505e5659583f3a16e957fd90_782d5e9534902a6.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
-  { image: "/media/catalog/projects/viber_image_2026-09-01_20-45-33-874.jpg", type: "image", sq: "Projekt i realizuar", en: "Completed project" },
-  { image: "/media/catalog/projects/viber_image_2026-09-01_20-46-40-211.jpg", type: "image", sq: "Projekt i realizuar", en: "Completed project" },
+  { image: "/media/catalog/projects/project-example-1.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
+  { image: "/media/catalog/projects/project-example-2.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
 ];
 
 // PAGE 3 — About + Contact
