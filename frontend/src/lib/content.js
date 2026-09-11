@@ -201,6 +201,10 @@ export const workExamples = [
   { image: "/media/catalog/projects/0-02-05-3150699f3c1763261cfdcb0457a26fbe0b2f7898505e5659583f3a16e957fd90_782d5e9534902a6.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
   { image: "/media/catalog/projects/project-example-1.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
   { image: "/media/catalog/projects/project-example-2.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
+  { image: "/media/catalog/projects/shembuj-666.jpg", type: "image", sq: "Projekt i realizuar", en: "Completed project" },
+  { image: "/media/catalog/projects/shembuj-444.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
+  { image: "/media/catalog/projects/shembuj-55-muted.mp4", type: "video", sq: "Projekt i realizuar", en: "Completed project" },
+  { image: "/media/catalog/projects/shembuj-viber-622.jpg", type: "image", sq: "Projekt i realizuar", en: "Completed project" },
 ];
 
 // PAGE 3 — About + Contact
