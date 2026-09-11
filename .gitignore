@@ -1,0 +1,5 @@
+# Dependencies are installed by the deployment platform.
+frontend/node_modules/
+
+# Production builds are generated during deployment.
+frontend/build/
